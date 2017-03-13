@@ -1,5 +1,5 @@
-#include "str.h"
 #include "stdafx.h"
+#include "str.h"
 
 str* str_init(const char* toCreate)
 {

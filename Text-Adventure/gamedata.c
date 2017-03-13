@@ -16,6 +16,7 @@ void gamedata_destroy(gamedata* toDestroy)
 	{
 		gameobj_destroy(toDestroy->objects[i]);
 	}
+	printf("objects destroyed\n");
 	free(toDestroy->objects);
 	free(toDestroy);
 }

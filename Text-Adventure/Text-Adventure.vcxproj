@@ -146,14 +146,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console.h" />
+    <ClInclude Include="core.h" />
     <ClInclude Include="gamedata.h" />
     <ClInclude Include="gameobj.h" />
     <ClInclude Include="settings.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="str.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="console.c" />
+    <ClCompile Include="core.c" />
     <ClCompile Include="gamedata.c" />
     <ClCompile Include="gameobj.c" />
     <ClCompile Include="stdafx.c">
@@ -162,6 +165,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="str.c" />
     <ClCompile Include="Test-Adventure.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

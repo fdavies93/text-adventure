@@ -12,8 +12,9 @@ gameobj* gameobj_init()
 
 void gameobj_destroy(gameobj* toDestroy)
 {
-	free(toDestroy->name);
-	free(toDestroy->description);
+	//free(toDestroy->name);
+	//free(toDestroy->description);
+	//as names and descriptions aren't dynamically allocated, free()ing them does nothing but crash the application
 	free(toDestroy);
 }
 

@@ -21,4 +21,4 @@
 #define ANSI_UNDERLINE "\x1B[4m"
 #define ANSI_STOP_UNDERLINE "\x1B[24m"
 
-void print(const char*);
+//void print(const char*);
