@@ -1,6 +1,6 @@
-#Text Adventure in C#
+# Text Adventure in C
 
-##Intro##
+## Intro
 
 This started off as a way of learning C, but has evolved into a parser / interpreter project in an attempt to do something more interesting with the concept.
 
