@@ -15,8 +15,6 @@ char* strlower(char* lowerThis, int strLen)
 
 char** splitLine(const char* toSplit, int* tokenNum)
 {
-
-	//seem to be issues relating to what's actually in the returned string of tokens
 	char* curStr = strtok(toSplit, " \n");
 	char* wordBuffer[WORD_BUFFER];
 	char** returnWords;

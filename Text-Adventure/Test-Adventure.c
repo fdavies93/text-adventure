@@ -6,6 +6,7 @@
 #include "settings.h"
 #include "gamedata.h"
 #include "gameobj.h"
+#include "bstnode.h"
 
 
 
@@ -21,6 +22,7 @@ int main()
 					 //the reverse would be an xor allocation (^=)
 	SetConsoleMode(hOut, dwMode);
 #endif
+	/*
 	gamedata* state = gamedata_init();
 
 	gameobj* player = gameobj_init();
@@ -63,6 +65,23 @@ int main()
 	}
 
 	gamedata_destroy(state);//this destroys all objects; therefore it's the major clean-up function
+	*/
+	bstnode* root = bstnode_init("f", NULL, BST_NODE_TYPE_OBJECT);
+	bstnode_insert(bstnode_init("k", NULL, BST_NODE_TYPE_OBJECT), root);
+	bstnode_insert(bstnode_init("a",NULL,BST_NODE_TYPE_OBJECT) , root);
+	bstnode_insert(bstnode_init("p", NULL, BST_NODE_TYPE_OBJECT), root);
+	bstnode_insert(bstnode_init("d", NULL, BST_NODE_TYPE_OBJECT), root);
+	bstnode_insert(bstnode_init("e", NULL, BST_NODE_TYPE_OBJECT), root);
+	bstnode_insert(bstnode_init("b", NULL, BST_NODE_TYPE_OBJECT), root);
+	
+	//bstnode_remove(root->left);
+
+	bstnode_print(root);
+	bstnode_remove(root);
+	print("\n");
+	bstnode_print(root);
+
+	system("PAUSE");
 
 	return 0;
 }
