@@ -2,6 +2,10 @@
 #include "settings.h"
 #include "bstnode.h"
 
+//constructs a free-floating node with a key, object, and type
+//note that using a void pointer and a simple int for objects
+//means that this can be used in many contexts, with type
+//casting and identification dependent on context
 bstnode* bstnode_init(char* key, void* object, int objtype)
 {
 	bstnode* returnNode = malloc(sizeof(bstnode));
@@ -145,4 +149,19 @@ void bstnode_print(bstnode* toPrint)
 		bstnode_print(toPrint->right);
 		printf("UP>");
 	}
+}
+
+bstnode* bstnode_search(bstnode* root,char* searchkey)
+{
+	bstnode* toreturn = NULL;
+	if (strcmp(root->key, searchkey) == 0) return root;
+	if (root->left != NULL)
+	{
+		toreturn = bstnode_search(root->left,searchkey);
+	}
+	if (root->right != NULL && toreturn == NULL)
+	{
+		toreturn = bstnode_search(root->right, searchkey);
+	}
+	return toreturn;
 }

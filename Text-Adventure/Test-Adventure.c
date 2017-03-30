@@ -22,8 +22,8 @@ int main()
 					 //the reverse would be an xor allocation (^=)
 	SetConsoleMode(hOut, dwMode);
 #endif
-	/*
-	gamedata* state = gamedata_init();
+	
+	/*gamedata* state = gamedata_init();
 
 	gameobj* player = gameobj_init();
 	player->name = "You";
@@ -76,10 +76,10 @@ int main()
 	
 	//bstnode_remove(root->left);
 
-	bstnode_print(root);
-	bstnode_remove(root);
-	print("\n");
-	bstnode_print(root);
+	//bstnode_print(bstnode_search(root, "a"));
+	//bstnode_remove(root);
+	//print("\n");
+	//bstnode_print(root);
 
 	system("PAUSE");
 

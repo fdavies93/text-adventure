@@ -1,7 +1,5 @@
 #pragma once
 
-#define BST_NODE_TYPE_OBJECT 0
-
 typedef struct bstnode
 {
 	char* key;
@@ -19,3 +17,4 @@ void bstnode_destroy(bstnode*);
 void bstnode_destroy_tree(bstnode*);
 void bstnode_getwidth(bstnode*, int*);
 void bstnode_print(bstnode*);
+bstnode* bstnode_search(bstnode*,char*);

@@ -1,5 +1,7 @@
 #pragma once
 #include "gameobj.h"
+#include "bstnode.h"
+#include "parser.h"
 
 typedef struct
 {
@@ -7,6 +9,9 @@ typedef struct
 	gameobj** objects;
 	int objectNum;
 	gameobj* player;
+	bstnode* words;
+	verb** verbs;
+	noun** nouns;
 } gamedata;
 
 gamedata* gamedata_init();

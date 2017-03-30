@@ -7,6 +7,20 @@ gamedata* gamedata_init()
 	data = malloc(sizeof(gamedata));
 	data->quit = 0;
 	data->objectNum = 0;
+	
+	//DECLARING OBJECTS
+	//this can be generated code...
+
+	data->objects = calloc(256,sizeof(gameobj));
+
+
+	
+	/////////////////////
+
+	//DECLARING WORDS
+
+	/////////////////////
+
 	return data;
 }
 
